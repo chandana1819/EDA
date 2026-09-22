@@ -1,0 +1,385 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "id": "22ab9484-0e9d-4c2c-a2be-fd0779f75880",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[[8 8 6 2 8]\n",
+      " [7 2 1 5 4]]\n",
+      "2\n",
+      "(2, 5)\n",
+      "10\n",
+      "int32\n",
+      "4\n",
+      "40\n"
+     ]
+    }
+   ],
+   "source": [
+    "import numpy as np\n",
+    "np.random.seed(2)\n",
+    "arr=np.random.randint(10,size=(2,5))\n",
+    "print(arr)\n",
+    "print(arr.ndim)\n",
+    "print(arr.shape)\n",
+    "print(arr.size)\n",
+    "print(arr.dtype)\n",
+    "print(arr.itemsize)\n",
+    "print(arr.nbytes)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "id": "67b60fea-e9c0-45d0-a78c-50aa6cd18492",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[[5 8 9 5 0]\n",
+      " [0 1 7 6 9]\n",
+      " [2 4 5 2 4]\n",
+      " [2 4 7 7 9]\n",
+      " [1 7 0 6 9]\n",
+      " [9 7 6 9 1]\n",
+      " [0 1 8 8 3]\n",
+      " [9 8 7 3 6]\n",
+      " [5 1 9 3 4]\n",
+      " [8 1 4 0 3]]\n",
+      "2\n",
+      "(10, 5)\n",
+      "50\n",
+      "int32\n",
+      "4\n",
+      "200\n",
+      "0\n"
+     ]
+    }
+   ],
+   "source": [
+    "import numpy as np\n",
+    "np.random.seed(1)\n",
+    "arr=np.random.randint(10,size=(10,5))\n",
+    "print(arr)\n",
+    "print(arr.ndim)\n",
+    "print(arr.shape)\n",
+    "print(arr.size)\n",
+    "print(arr.dtype)\n",
+    "print(arr.itemsize)\n",
+    "print(arr.nbytes)\n",
+    "print(arr[-1,-2])"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 22,
+   "id": "0f691ddf-b7c1-4e47-9ac0-9704871cd17e",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[[5 8 9 5 0]\n",
+      " [0 1 7 6 9]]\n",
+      "2\n",
+      "(2, 5)\n",
+      "10\n",
+      "int32\n",
+      "4\n",
+      "40\n",
+      "6\n",
+      "[[5 8 9]\n",
+      " [0 1 7]]\n",
+      "[[0 1 7]]\n",
+      "[5 0]\n",
+      "[5 8 9 5 0]\n"
+     ]
+    }
+   ],
+   "source": [
+    "import numpy as np\n",
+    "np.random.seed(1)\n",
+    "arr=np.random.randint(10,size=(2,5))\n",
+    "print(arr)\n",
+    "print(arr.ndim)\n",
+    "print(arr.shape)\n",
+    "print(arr.size)\n",
+    "print(arr.dtype)\n",
+    "print(arr.itemsize)\n",
+    "print(arr.nbytes)\n",
+    "print(arr[-1,-2])\n",
+    "print(arr[:2,:3])\n",
+    "print(arr[1:2,:3])\n",
+    "print(arr[:,0])\n",
+    "print(arr[0,:])\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 27,
+   "id": "4f6af219-062d-4d82-90aa-5c22e8cd76d9",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[6 4 1 4 8 1 8 3 9 7]\n",
+      "4\n",
+      "9\n",
+      "[4 8 1 8 3 9]\n",
+      "[4]\n",
+      "[7 9 3 8 1 8 4 1 4 6]\n"
+     ]
+    }
+   ],
+   "source": [
+    "import numpy as np\n",
+    "np.random.seed()\n",
+    "arr=np.random.randint(10,size=10)\n",
+    "print(arr)\n",
+    "print(arr[3])\n",
+    "print(arr[-2])\n",
+    "print(arr[3:9:1])\n",
+    "print(arr[3:5:3])\n",
+    "print(arr[::-1])"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 28,
+   "id": "77f590c4-ab6f-49c0-9be7-8cfcfc739cfa",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[ 1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20]\n",
+      "1\n",
+      "(20,)\n",
+      "20\n",
+      "int64\n"
+     ]
+    }
+   ],
+   "source": [
+    "#8\n",
+    "import numpy as np\n",
+    "arr = np.arange(1, 21)\n",
+    "print( arr)\n",
+    "print( arr.ndim)\n",
+    "print( arr.shape)\n",
+    "print( arr.size)\n",
+    "print( arr.dtype)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 26,
+   "id": "0ff4c025-fe80-4a6b-9902-2095cde3e9ac",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[[ 7  7 28 36 13]\n",
+      " [ 3 23 22 12 41]\n",
+      " [ 4 27 18 23 49]\n",
+      " [19 42 27 47 16]]\n",
+      "4\n",
+      "80\n",
+      "20\n"
+     ]
+    }
+   ],
+   "source": [
+    "#9\n",
+    "import numpy as np\n",
+    "np.random.seed()\n",
+    "\n",
+    "arr = np.random.randint(0, 51, size=(4, 5))\n",
+    "\n",
+    "print( arr)\n",
+    "print( arr.itemsize)\n",
+    "print( arr.nbytes)\n",
+    "print( arr.size)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 16,
+   "id": "404c90db-3e6d-439a-9f81-f0537e11e3d3",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[[26 16 45 41]\n",
+      " [18 15  0  4]\n",
+      " [25 47 34 23]]\n",
+      "[[26 16]\n",
+      " [18 15]]\n",
+      "[[26 45]\n",
+      " [18  0]\n",
+      " [25 34]]\n",
+      "[[41 45 16 26]\n",
+      " [ 4  0 15 18]\n",
+      " [23 34 47 25]]\n"
+     ]
+    }
+   ],
+   "source": [
+    "#11\n",
+    "import numpy as np\n",
+    "arr = np.random.randint(0,50 ,size=(3, 4))\n",
+    "\n",
+    "\n",
+    "print(arr)\n",
+    "\n",
+    "print(arr[:2, :2])\n",
+    "print(arr[:, ::2])\n",
+    "print(arr[:, ::-1])"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 24,
+   "id": "ea5b052f-7406-4bdf-b5c1-373c4e334a1d",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[[ 1  2  3  4]\n",
+      " [ 5  6  7  8]\n",
+      " [ 9 10 11 12]]\n",
+      "7\n",
+      "[ 9 10 11 12]\n",
+      "[ 4  8 12]\n"
+     ]
+    }
+   ],
+   "source": [
+    "#10\n",
+    "import numpy as np\n",
+    "\n",
+    "arr = np.arange(1, 13).reshape(3, 4)\n",
+    "print(arr)\n",
+    "\n",
+    "x = arr[1, 2]\n",
+    "print( x)\n",
+    "\n",
+    "\n",
+    "y= arr[-1, :]\n",
+    "print( y)\n",
+    "\n",
+    "z = arr[:, -1]\n",
+    "print(z)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 25,
+   "id": "2917cff5-f7cd-4d97-9793-b09bdc8c40ae",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[[ 1  2  3  4]\n",
+      " [ 5  6  7  8]\n",
+      " [ 9 10 11 12]]\n",
+      "[[ 5  6  7  8]\n",
+      " [ 9 10 11 12]]\n",
+      "[[999   6   7   8]\n",
+      " [  9  10  11  12]]\n",
+      "[[  1   2   3   4]\n",
+      " [999   6   7   8]\n",
+      " [  9  10  11  12]]\n",
+      "[[999   6   7   8]\n",
+      " [  9  10  11  12]]\n",
+      "[[555   6   7   8]\n",
+      " [  9  10  11  12]]\n",
+      "[[  1   2   3   4]\n",
+      " [999   6   7   8]\n",
+      " [  9  10  11  12]]\n"
+     ]
+    }
+   ],
+   "source": [
+    "#12\n",
+    "import numpy as np\n",
+    "\n",
+    "arr = np.arange(1, 13).reshape(3,4)\n",
+    "print( arr)\n",
+    "\n",
+    "subarray = arr[1:4, :]\n",
+    "print(subarray)\n",
+    "\n",
+    "subarray[0, 0] = 999\n",
+    "print(subarray)\n",
+    "\n",
+    "print( arr)\n",
+    "\n",
+    "subarray = arr[1:4, :].copy()\n",
+    "print( subarray)\n",
+    "\n",
+    "subarray[0, 0] = 555\n",
+    "print( subarray)\n",
+    "\n",
+    "print(arr)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "8184b165-cdaa-4b90-b3be-7b1140b1502c",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "abcedfcf-8745-4419-9149-160e337a4d54",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.14.6"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
